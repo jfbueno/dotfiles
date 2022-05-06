@@ -101,7 +101,7 @@ plugins=(git node ng)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/my-themes/default.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.poshthemes/night-owl.omp.json)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
