@@ -101,7 +101,9 @@ plugins=(git node ng)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(oh-my-posh init zsh --config ~/.poshthemes/night-owl.omp.json)"
+export PATH="$PATH:/home/jef/.local/bin"
+
+eval "$(oh-my-posh init zsh --config ~/.poshthemes/crazy-diamond.omp.json)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -117,9 +119,27 @@ alias fush="git push --force-with-lease"
 alias co="git checkout"
 alias gst="git status"
 
+alias python="python3"
+
 function gll() {
     git log --oneline "-$1"
 }
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/jef/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/jef/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jef/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/jef/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
