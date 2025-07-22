@@ -101,7 +101,8 @@ plugins=(git node ng)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$PATH:/home/jef/.local/bin"
+export PATH="$PATH:/home/jef/.local/bin:/snap/bin"
+export PATH="$PATH:/home/jef/.duckdb/cli/latest"
 
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/crazy-diamond.omp.json)"
 
@@ -142,4 +143,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
