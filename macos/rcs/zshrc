@@ -1,0 +1,8 @@
+eval "$(oh-my-posh init zsh --config ~/.env/omp-themes/crazy-diamond.omp.json)"
+
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit
+compinit
+
+# Carrega zshrc local para configs específicas da máquina
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
