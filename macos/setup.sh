@@ -1,3 +1,7 @@
+echo "Instalando bat e delta"
+brew install bat
+brew install git-delta
+
 echo "Instalando utilitários"
 
 brew install --cask maccy
