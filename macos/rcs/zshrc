@@ -1,8 +1,17 @@
 eval "$(oh-my-posh init zsh --config ~/.env/omp-themes/crazy-diamond.omp.json)"
 
-fpath=(~/.zsh/completion $fpath)
+fpath=(~/.zsh/completion "/opt/homebrew/share/zsh/site-functions" $fpath)
 autoload -Uz compinit
 compinit
 
+alias k='kubectl'
+alias ls='ls -a'
+alias ll='ls -la'
+
 # Carrega zshrc local para configs específicas da máquina
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
