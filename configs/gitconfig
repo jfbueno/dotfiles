@@ -48,3 +48,6 @@
 
 [include]
     path = ~/.gitconfig.local
+[user]
+	name = jfbueno
+	email = jfbueno@users.noreply.github.com
